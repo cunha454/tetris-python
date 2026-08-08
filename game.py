@@ -1,11 +1,13 @@
 import pygame as pg
 from config import WIDTH_SCREEN, LENGTH_SCREEN, FPS
+from board import Board
 
 class Game:
     def __init__(self):
         pg.init()
         self.screen = pg.display.set_mode((WIDTH_SCREEN, LENGTH_SCREEN))
         self.clock = pg.time.Clock()
+        self.board = Board()
 
     def load_screen(self):
         pg.display.flip()
